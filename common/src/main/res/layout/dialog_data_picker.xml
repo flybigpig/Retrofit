@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+
+    <com.jixian.auminingwallet.widget.TextColorNumberPick
+        android:id="@+id/np_dialog_cityproper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorAccent"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/btn_dialog_locate_sure"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"
+            tool:text="确定" />
+
+    </RelativeLayout>
+</LinearLayout>

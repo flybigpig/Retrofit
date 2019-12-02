@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--底部导航栏自定义属性 start-->
+    <declare-styleable name="BottomNavigationLayout">
+        <attr name="tab_selected_textColor" format="color" />
+        <attr name="tab_unselected_textColor" format="color" />
+    </declare-styleable>
+    <!--底部导航栏自定义属性 end-->
+
+    <!--百分比的View start-->
+    <declare-styleable name="PercentView">
+        <attr name="width_height_percent" format="float" />
+        <attr name="width_weight" format="integer" />
+        <attr name="height_weight" format="integer" />
+    </declare-styleable>
+    <!--百分比的View end-->
+
+    <!--圆点标签 start-->
+    <declare-styleable name="BadgeView">
+        <attr name="mode" format="enum">
+            <!--数字模式-->
+            <enum name="number" value="1" />
+            <!--小圆点模式-->
+            <enum name="point" value="2" />
+        </attr>
+        <attr name="background_color" format="color" />
+        <attr name="text_color" format="color" />
+        <attr name="radius_size" format="float" />
+    </declare-styleable>
+    <!--圆点标签 end-->
+
+    <!--滑动开关 start-->
+    <declare-styleable name="SwitchButton">
+        <attr name="sb_shadow_radius" format="reference|dimension"/>       阴影半径
+        <attr name="sb_shadow_offset" format="reference|dimension"/>       阴影偏移
+        <attr name="sb_shadow_color" format="reference|color"/>            阴影颜色
+        <attr name="sb_uncheck_color" format="reference|color"/>           关闭颜色
+        <attr name="sb_checked_color" format="reference|color"/>           开启颜色
+        <attr name="sb_border_width" format="reference|dimension"/>        边框宽度
+        <attr name="sb_checkline_color" format="reference|color"/>         开启指示器颜色
+        <attr name="sb_checkline_width" format="reference|dimension"/>     开启指示器线宽
+        <attr name="sb_uncheckcircle_color" format="reference|color"/>     关闭指示器颜色
+        <attr name="sb_uncheckcircle_width" format="reference|dimension"/> 关闭指示器线宽
+        <attr name="sb_uncheckcircle_radius" format="reference|dimension"/>关闭指示器半径
+        <attr name="sb_checked" format="reference|boolean"/>               是否选中
+        <attr name="sb_shadow_effect" format="reference|boolean"/>         是否启用阴影
+        <attr name="sb_effect_duration" format="reference|integer"/>       动画时间，默认300ms
+        <attr name="sb_button_color" format="reference|color"/>            按钮颜色
+        <attr name="sb_show_indicator" format="reference|boolean"/>        是否显示指示器，默认true：显示
+        <attr name="sb_background" format="reference|color"/>              背景色，默认白色
+        <attr name="sb_enable_effect" format="reference|boolean"/>         是否启用特效，默认true
+    </declare-styleable>
+    <!--滑动开关 end-->
+
+</resources>

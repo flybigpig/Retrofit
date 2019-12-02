@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. start-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:windowBackground">@color/translucent</item>-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowBackground">@color/activityBackground</item>
+        <item name="android:actionBarSize">@dimen/toolbar_height</item>
+    </style>
+    <!-- Base application theme. end-->
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <!-- 隐藏系统标题栏 -->
+        <item name="windowNoTitle">true</item>
+        <!--activity跳转动画-->
+        <!--<item name="android:activityOpenEnterAnimation">@anim/slide_in_top</item>-->
+        <!--<item name="android:activityOpenExitAnimation">@anim/slide_in_top</item>-->
+        <!--<item name="android:activityCloseEnterAnimation">@anim/slide_out_top</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar.FullScreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--半透明窗口-->
+    <style name="Theme_Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparency</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--透明窗口-->
+    <style name="Theme_Panel" parent="android:style/Theme.Panel"></style>
+
+    <style name="EditText_Underline" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/gray_128</item>
+        <item name="colorControlActivated">@color/gray_128</item>
+    </style>
+
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:clickable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding_5"
+    android:paddingTop="@dimen/padding_5">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_tab_selected_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10"
+            android:paddingTop="@dimen/padding_5" />
+
+        <ImageView
+            android:id="@+id/iv_tab_unselected_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10"
+            android:paddingTop="@dimen/padding_5" />
+
+        <com.tool.cn.widget.BadgeView
+            android:id="@+id/badgeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            app:mode="point" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_tab_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:textColor="@color/gray_128"
+        android:textSize="@dimen/text_size_xsmall" />
+
+</LinearLayout>

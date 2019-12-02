@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <!-- 隐藏系统标题栏 -->
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+</resources>

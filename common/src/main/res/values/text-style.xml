@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="text_white_xlarge">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+    </style>
+
+    <style name="text_white_large">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="text_white_medium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="text_gray_large">
+        <item name="android:textColor">@color/text_gray_color</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="text_gray_xlarge">
+        <item name="android:textColor">@color/text_gray_color</item>
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+    </style>
+
+    <style name="text_black_large">
+        <item name="android:textColor">@color/text_black_color</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="text_black_xlarge">
+        <item name="android:textColor">@color/text_black_color</item>
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+    </style>
+
+    <style name="text_black_xxlarge">
+        <item name="android:textColor">@color/text_black_color</item>
+        <item name="android:textSize">@dimen/text_size_xxlarge</item>
+    </style>
+
+    <style name="text_black_xxxlarge">
+        <item name="android:textColor">@color/text_black_color</item>
+        <item name="android:textSize">@dimen/text_size_xxxlarge</item>
+    </style>
+
+    <style name="text_white_xxxlarge">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_xxxlarge</item>
+    </style>
+
+    <style name="text_white_small">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="text_white_xsmall">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/text_gray_color</item>
+        <item name="android:textSize">@dimen/text_size_xsmall</item>
+    </style>
+
+    <style name="text_white_xxsmall">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/text_gray_color</item>
+        <item name="android:textSize">@dimen/text_size_xxsmall</item>
+    </style>
+
+    <style name="text_black_medium">
+        <item name="android:textColor">@color/text_black_color</item>
+        <item name="android:textColorHint">@color/text_gray_color</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="text_black_small">
+        <item name="android:textColor">@color/text_black_color</item>
+        <item name="android:textColorHint">@color/text_gray_color</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="text_black_xsmall">
+        <item name="android:textColor">@color/text_black_color</item>
+        <item name="android:textColorHint">@color/text_gray_color</item>
+        <item name="android:textSize">@dimen/text_size_xsmall</item>
+    </style>
+
+    <style name="text_gray_medium">
+        <item name="android:textColor">@color/text_gray_color</item>
+        <item name="android:textColorHint">@color/text_gray_color</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="text_gray_small">
+        <item name="android:textColor">@color/text_gray_color</item>
+        <item name="android:textColorHint">@color/text_gray_color</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="text_gray_xsmall">
+        <item name="android:textColor">@color/text_gray_color</item>
+        <item name="android:textSize">@dimen/text_size_xsmall</item>
+    </style>
+
+
+    <style name="text_green_xxxlarge">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">@dimen/text_size_xxxlarge</item>
+    </style>
+
+    <style name="text_red_xxxlarge">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/text_size_xxxlarge</item>
+    </style>
+</resources>

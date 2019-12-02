@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="line_horizontal">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <style name="line_margin_left_10">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginLeft">@dimen/margin_10</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <style name="line_margin_left_right_10">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginLeft">@dimen/margin_10</item>
+        <item name="android:layout_marginRight">@dimen/margin_10</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparency_250"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_camera"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:background="@color/bg_white"
+        android:textColor="@color/text_black_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <TextView
+        android:id="@+id/dialog_photo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:background="@color/bg_white"
+        android:textColor="@color/text_black_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/dialog_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="@color/bg_white"
+        android:textColor="@color/text_black_color"
+        android:textSize="16sp"
+        tool:text="取消" />
+
+</LinearLayout>
