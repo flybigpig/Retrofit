@@ -1,1 +1,1 @@
-include ':app', ':common', ':rxbus', ':utils'
+include ':app', ':common', ':rxbus', ':utils', ':myapplication'

@@ -4,6 +4,7 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.example.baidu.retrofit.Activity.CustonViewBserActivity;
 import com.example.baidu.retrofit.Activity.ImageListActivity;
 import com.example.baidu.retrofit.Activity.LoadMoreActivity;
 import com.example.baidu.retrofit.Bean.StudyBean;
@@ -30,6 +31,9 @@ public class ListActivityAdapter extends BaseQuickAdapter<StudyBean, BaseViewHol
                 break;
             case 1:
                 IntentUtils.openActivity(mContext, ImageListActivity.class);
+                break;
+            case 2:
+                IntentUtils.openActivity(mContext, CustonViewBserActivity.class);
                 break;
         }
 

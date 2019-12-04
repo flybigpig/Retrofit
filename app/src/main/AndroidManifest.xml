@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activity.ImageListActivity"></activity>
+        <activity android:name=".Activity.CustonViewBserActivity"></activity>
+        <activity android:name=".Activity.ImageListActivity" />
         <activity android:name=".Activity.LoadMoreActivity" />
         <activity android:name=".Activity.CustomViewActivity" />
         <activity android:name=".Activity.LoginActivity" />
