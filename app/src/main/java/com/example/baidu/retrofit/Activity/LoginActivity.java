@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 import com.example.baidu.retrofit.R;
 import com.example.baidu.retrofit.View.LoginView;
 
@@ -28,6 +29,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
     /**
      * 这里做提示
+     *
      * @param msg 我们所想提示的内容
      */
     @Override
@@ -40,12 +42,13 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
      */
     @Override
     public void onSuccess() {
-        Intent intent = new Intent(this,FirstActivity.class);
+        Intent intent = new Intent(this, FirstActivity.class);
         startActivity(intent);
     }
 
     /**
      * 对外提供获取用户输入的账号
+     *
      * @return
      */
     @Override
@@ -55,6 +58,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
     /**
      * 对外提供获取用户输入的密码
+     *
      * @return
      */
     @Override
