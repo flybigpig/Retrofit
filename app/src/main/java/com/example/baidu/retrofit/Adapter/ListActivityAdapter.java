@@ -6,6 +6,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.baidu.retrofit.Activity.CustonViewBserActivity;
 import com.example.baidu.retrofit.Activity.ImageListActivity;
+import com.example.baidu.retrofit.Activity.ImageSwitcherActivity;
 import com.example.baidu.retrofit.Activity.LoadMoreActivity;
 import com.example.baidu.retrofit.Bean.StudyBean;
 import com.example.baidu.retrofit.R;
@@ -34,6 +35,9 @@ public class ListActivityAdapter extends BaseQuickAdapter<StudyBean, BaseViewHol
                 break;
             case 2:
                 IntentUtils.openActivity(mContext, CustonViewBserActivity.class);
+                break;
+            case 3:
+                IntentUtils.openActivity(mContext, ImageSwitcherActivity.class);
                 break;
         }
 

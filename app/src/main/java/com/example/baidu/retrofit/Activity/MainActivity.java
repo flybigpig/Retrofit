@@ -81,6 +81,8 @@ public class MainActivity extends Rx2Activity {
 
         listString.add(new StudyBean("贝塞尔曲线", "", "url"));
 
+        listString.add(new StudyBean("ImageSwitcer", "", "url"));
+
 
         activityAdapter.setNewData(listString);
         activityAdapter.notifyDataSetChanged();
