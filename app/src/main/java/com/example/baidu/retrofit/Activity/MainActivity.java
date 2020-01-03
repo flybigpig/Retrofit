@@ -83,6 +83,8 @@ public class MainActivity extends Rx2Activity {
 
         listString.add(new StudyBean("ImageSwitcer", "", "url"));
 
+        listString.add(new StudyBean("GanHuo", "", "url"));
+
 
         activityAdapter.setNewData(listString);
         activityAdapter.notifyDataSetChanged();

@@ -5,6 +5,7 @@ import com.example.baidu.retrofit.Bean.HttpResult;
 import com.example.baidu.retrofit.Bean.ResultBean;
 import com.example.baidu.retrofit.Bean.UploadAvatarResponseBean;
 import com.example.baidu.retrofit.Bean.WANAndroid;
+import com.example.baidu.retrofit.Bean.home.AndroidBean;
 
 import java.util.List;
 
@@ -19,16 +20,20 @@ import retrofit2.http.Path;
 
 public interface Api {
 
-    String surl = "http://gank.io/api/data/福利/";
-    String downloadUrl ="" ;
+    String surl = "http://gank.io/api/data/";
+    String downloadUrl = "";
 
-    @GET("{count}/{page}")
+    @GET("福利/{count}/{page}")
     Observable<ResultBean<List<GanhuoNews>>> getNews(@Path("count") int count, @Path("page") int page);
 
-    @GET("article/list/{page}/json")
-    Observable<ResultBean<WANAndroid>> getArticle(@Path("page") int page);
+
+    @GET("Android/{size}/{page}")
+    Observable<ResultBean<List<AndroidBean>>> getArticle(@Path("size") int size, @Path("page") int page);
 
     @Multipart
     @POST("user/register.do")
     Observable<UploadAvatarResponseBean> register(@Part List<MultipartBody.Part> partList);
+
+
+    //    wanAndroid
 }

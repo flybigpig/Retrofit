@@ -91,7 +91,7 @@ public class LoadMoreActivity extends Rx2Activity {
                 .observeOn(AndroidSchedulers.mainThread()).subscribe(new BaseObserver<List<GanhuoNews>>((Rx2Activity) mContext) {
             @Override
             public void onPageLoading(int pageSize, int totalCount) {
-                mPageSize = 15;
+                mPageSize = 10;
 
             }
 
@@ -104,7 +104,7 @@ public class LoadMoreActivity extends Rx2Activity {
                     } else {
                         ganHuoAdapter.addData(ganhuoNews);
                     }
-                    if (mPageSize < count) {
+                    if (mPageSize >= count) {
                         ganHuoAdapter.loadMoreEnd();
                     } else {
                         ganHuoAdapter.loadMoreComplete();

@@ -34,15 +34,14 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
- *  2016/11/9 14:21.
- *
+ * 2016/11/9 14:21.
  *
  * @version 1.0.0
  * @class NetworkUtils
  * @describe 网络相关辅助工具类
  */
 @SuppressWarnings({"unused", "WeakerAccess"})
-public class NetworkUtils{
+public class NetworkUtils {
 
     private static final String TAG = "NetworkUtils";
     public static final int RESULT_OPEN_SETTINGS = 0;
@@ -72,7 +71,7 @@ public class NetworkUtils{
      */
     public static boolean isConnected(@NonNull Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
+                .getSystemService(context.CONNECTIVITY_SERVICE);
         if (null != connectivityManager) {
             NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
             if (null != networkInfo && networkInfo.isConnected()) {
@@ -114,7 +113,7 @@ public class NetworkUtils{
      */
     public static boolean isWifi(@NonNull Context context) {
         int connectedType = getConnectedType(context);
-        return connectedType != -1 && (connectedType == ConnectivityManager.TYPE_WIFI) ;
+        return connectedType != -1 && (connectedType == ConnectivityManager.TYPE_WIFI);
     }
 
     /**

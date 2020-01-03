@@ -8,6 +8,7 @@ import com.example.baidu.retrofit.Activity.CustonViewBserActivity;
 import com.example.baidu.retrofit.Activity.ImageListActivity;
 import com.example.baidu.retrofit.Activity.ImageSwitcherActivity;
 import com.example.baidu.retrofit.Activity.LoadMoreActivity;
+import com.example.baidu.retrofit.Activity.wanAndroid.HomePageActivity;
 import com.example.baidu.retrofit.Bean.StudyBean;
 import com.example.baidu.retrofit.R;
 import com.tool.cn.utils.IntentUtils;
@@ -38,6 +39,9 @@ public class ListActivityAdapter extends BaseQuickAdapter<StudyBean, BaseViewHol
                 break;
             case 3:
                 IntentUtils.openActivity(mContext, ImageSwitcherActivity.class);
+                break;
+            case 4:
+                IntentUtils.openActivity(mContext, HomePageActivity.class);
                 break;
         }
 

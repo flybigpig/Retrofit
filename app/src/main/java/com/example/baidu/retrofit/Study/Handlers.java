@@ -1,6 +1,8 @@
 package com.example.baidu.retrofit.Study;
 
-public class Handler {
+import android.os.Handler;
+
+public class Handlers extends Handler {
 
     /*
 
@@ -13,7 +15,7 @@ public class Handler {
      https://user-gold-cdn.xitu.io/2019/2/26/16927e6098cf257b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1
 
 
-
+      // 核心机制
      去看下handler机制就明白了，网上一大把。
 
       1.handler机制是使用pipe来实现的
@@ -31,4 +33,6 @@ public class Handler {
 
 
      */
+
+
 }

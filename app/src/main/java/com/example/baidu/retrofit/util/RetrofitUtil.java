@@ -62,10 +62,9 @@ public class RetrofitUtil {
                     @Override
                     public void log(String message) {
                         try {
-                            LogUtils.i(TAG, message);
+                            Log.d(TAG, message);
                         } catch (Exception e) {
                             e.printStackTrace();
-                            LogUtils.e(TAG, message);
                         }
                     }
                 });

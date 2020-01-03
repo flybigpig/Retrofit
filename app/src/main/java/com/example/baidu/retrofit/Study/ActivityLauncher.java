@@ -85,19 +85,7 @@ public class ActivityLauncher {
         注释4，如果启动失败，通知AMS去finishActivity。
 
 
-
-
-
-
-
-
-
-
-
-
-
      */
-
 
 
 }

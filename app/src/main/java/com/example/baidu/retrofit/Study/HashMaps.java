@@ -1,16 +1,15 @@
 package com.example.baidu.retrofit.Study;
 
 import java.util.HashMap;
+import java.util.Map;
 
-public class HashMaps extends HashMap {
+public class HashMaps extends HashMap implements Map {
 
     /**
      * 分析 HashMap
      * <p>
      * 比较 SparseArray
      *
-
-
 
      *HashMap 和 LinkedHashMap 相关：
 
@@ -38,32 +37,18 @@ public class HashMaps extends HashMap {
      来源：简书
      著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     */
+    /******
+     * <a href="{@docRoot}openjdk-redirect.html?v=8&path=/technotes/guides/collections/index.html">
+     *
      */
 
-
-
+    /**
+     * <a href="{@docRoot}openjdk-redirect.html?v=8&path=/technotes/guides/collections/index.html">
+     * @param initialCapacity
+     * @param loadFactor
+     */
+    public HashMaps(int initialCapacity, float loadFactor) {
+        super(initialCapacity, loadFactor);
+    }
 }

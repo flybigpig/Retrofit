@@ -58,13 +58,11 @@ public class ContentProviders extends ContentProvider {
 
     /**
      * 数据库
-     *
      */
     static class sqlData extends SQLiteOpenHelper {
         /*
 
          dbHelper.getWritableDatabase(); // 会创建一个新的数据库
-
 
          */
 
@@ -86,7 +84,7 @@ public class ContentProviders extends ContentProvider {
 
     }
 
-    private void insert(){
+    private void insert() {
 //        SQLiteDatabase db = sqlData.getWritableDatabase();
 //        ContentValues values = new ContentValues();
 //        // 开始组装第一条数据
@@ -100,20 +98,6 @@ public class ContentProviders extends ContentProvider {
 
 
 //    ContentResolver
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
