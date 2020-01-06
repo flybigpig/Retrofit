@@ -9,6 +9,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="toolbarStyle">@style/toolBarStyle</item>
         <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowIsTranslucent">false</item>
         <item name="android:fitsSystemWindows">true</item>
 
     </style>

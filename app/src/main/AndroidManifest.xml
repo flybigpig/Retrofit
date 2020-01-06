@@ -5,16 +5,27 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:allowBackup="true"
         android:appComponentFactory=""
+        android:configChanges="orientation|screenSize|keyboardHidden"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/TranslucentTheme"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="stateHidden|adjustResize"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".Activity.ImageSwitcherActivity"></activity>
+        <activity android:name=".Activity.wanAndroid.WebViewActivity"></activity>
+        <activity android:name=".Activity.ImageSwitcherActivity" />
         <activity android:name=".Activity.wanAndroid.HomePageActivity" />
         <activity android:name=".Activity.CustonViewBserActivity" />
         <activity android:name=".Activity.ImageListActivity" />

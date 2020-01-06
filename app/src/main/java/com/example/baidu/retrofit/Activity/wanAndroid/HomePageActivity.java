@@ -16,6 +16,7 @@ import com.example.baidu.retrofit.Bean.GanhuoNews;
 import com.example.baidu.retrofit.Bean.WANAndroid;
 import com.example.baidu.retrofit.Bean.home.AndroidBean;
 import com.example.baidu.retrofit.R;
+import com.example.baidu.retrofit.fragment.home.AndroidFragment;
 import com.example.baidu.retrofit.fragment.home.HomeFragment;
 import com.example.baidu.retrofit.util.BaseObserver;
 import com.example.baidu.retrofit.util.RetrofitUtil;
@@ -42,6 +43,7 @@ public class HomePageActivity extends Rx2Activity {
     private List<Fragment> fragments = new ArrayList<>();
     private List<String> titles = new ArrayList<>();
     private HomeFragment homeFragment;
+    private HomeFragment androidFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +55,8 @@ public class HomePageActivity extends Rx2Activity {
     @Override
     protected void init() {
         super.init();
-        homeFragment = new HomeFragment().getInstance("android");
-        fragments.add(homeFragment);
+        androidFragment = new AndroidFragment().getInstance("android");
+        fragments.add(androidFragment);
 
         titles.add("Android");
 //        titles.add("Ios");

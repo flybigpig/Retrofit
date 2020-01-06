@@ -1,11 +1,14 @@
 package com.example.baidu.retrofit.Adapter.home;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.example.baidu.retrofit.Activity.wanAndroid.WebViewActivity;
 import com.example.baidu.retrofit.Bean.home.AndroidBean;
 import com.example.baidu.retrofit.Bean.home.ArticalBean;
 import com.example.baidu.retrofit.R;
@@ -25,6 +28,7 @@ public class HomeAdapter extends BaseQuickAdapter<AndroidBean, BaseViewHolder> i
 
     public HomeAdapter(@Nullable List<AndroidBean> data) {
         super(R.layout.item_android, data);
+        setOnItemClickListener(this);
     }
 
     @Override
@@ -41,6 +45,9 @@ public class HomeAdapter extends BaseQuickAdapter<AndroidBean, BaseViewHolder> i
 
     @Override
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-
+        AndroidBean androidBean = (AndroidBean) adapter.getData().get(position);
+        Intent intent = new Intent(mContext, WebViewActivity.class);
+        intent.putExtra("url", androidBean.getUrl());
+        mContext.startActivity(intent);
     }
 }
