@@ -7,9 +7,13 @@ import com.tencent.smtt.sdk.QbSdk;
 import com.tool.cn.utils.CrashHandler;
 import com.tool.cn.utils.LogUtils;
 
+import cn.jpush.android.api.JPushInterface;
+
+
 public class MyApplication extends Application {
 
     private static MyApplication instance;
+    public String registrationID;
 
     @Override
     public void onCreate() {
@@ -36,6 +40,10 @@ public class MyApplication extends Application {
         };
         //x5内核初始化接口
         QbSdk.initX5Environment(getApplicationContext(), cb);
+
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
+        registrationID = JPushInterface.getRegistrationID(this);
     }
 
     public static MyApplication getInstance() {

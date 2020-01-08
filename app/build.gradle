@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.github.dcendents.android-maven'
 
 android {
+
+
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.baidu.retrofit"
@@ -15,7 +17,23 @@ android {
         ndk {
             abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
         }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.example.baidu.retrofit",
+                JPUSH_APPKEY : "ced138d5d31d0ce52f5860c2", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+        packagingOptions {
+            doNotStrip '*/mips/*.so'
+            doNotStrip '*/mips64/*.so'
+        }
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -75,5 +93,8 @@ dependencies {
     implementation project(path: ':common')
     implementation project(path: ':rxbus')
     implementation 'com.android.support:design:28.0.0'
+
+    implementation 'cn.jiguang.sdk:jpush:3.5.4'  // 此处以JPush 3.5.4 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.2.6'  // 此处以JCore 2.2.6 版本为例。
 
 }

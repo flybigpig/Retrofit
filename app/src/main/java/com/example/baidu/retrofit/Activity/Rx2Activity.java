@@ -1,6 +1,7 @@
 package com.example.baidu.retrofit.Activity;
 
 import android.content.IntentFilter;
+import android.content.pm.ActivityInfo;
 import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -43,6 +44,7 @@ public abstract class Rx2Activity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         if (compositeDisposable == null) {
             compositeDisposable = new CompositeDisposable();
         }
