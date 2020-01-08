@@ -3,6 +3,7 @@ package com.example.baidu.retrofit;
 import android.app.Application;
 import android.util.Log;
 
+import com.mob.MobSDK;
 import com.tencent.smtt.sdk.QbSdk;
 import com.tool.cn.utils.CrashHandler;
 import com.tool.cn.utils.LogUtils;
@@ -44,6 +45,8 @@ public class MyApplication extends Application {
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
         registrationID = JPushInterface.getRegistrationID(this);
+
+        MobSDK.init(this, "2dc08f5fc143e", "5dd794d8c9662b965f8182f7d9b503c8");
     }
 
     public static MyApplication getInstance() {

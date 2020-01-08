@@ -1,0 +1,60 @@
+apply plugin: 'com.mob.sdk'
+
+MobSDK {
+    appKey "2dc08f5fc143e"
+    appSecret "5dd794d8c9662b965f8182f7d9b503c8"
+    ShareSDK {
+        loopShare true
+        devInfo {
+            SinaWeibo {
+                appKey "568898243"
+                appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Wechat {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+            }
+            QQ {
+                appId "100371282"
+                appKey "aed9b0303e3ed1e27bae87c33761161d"
+            }
+            Facebook {
+                appKey "1412473428822331"
+                appSecret "a42f4f3f867dc947b9ed6020c2e93558"
+                callbackUri "https://mob.com"
+            }
+            Twitter {
+                appKey "LRBM0H75rWrU9gNHvlEAA2aOy"
+                appSecret "gbeWsZvA9ELJSdoBzJ5oLKX0TU09UOwrzdGfo9Tg7DjyGuMe8G"
+                callbackUri "http://mob.com"
+            }
+            ShortMessage {}
+            LinkedIn {
+                appKey "ejo5ibkye3vo"
+                appSecret "cC7B2jpxITqPLZ5M"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            Douyin {
+                appKey "aw9ivykfjvi4hpwo"
+                appSecret "42b4caa6bda60bd49f05f06d0a4956e1"
+            }
+            FacebookMessenger {
+                appId "107704292745179"
+            }
+            WhatsApp {}
+            WechatMoments {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+            WechatFavorite {
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+        }
+    }
+}

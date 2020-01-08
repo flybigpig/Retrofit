@@ -85,6 +85,8 @@ public class MainActivity extends Rx2Activity {
 
         listString.add(new StudyBean("GanHuo", "", "url"));
 
+        listString.add(new StudyBean("Share", "", "url"));
+
 
         activityAdapter.setNewData(listString);
         activityAdapter.notifyDataSetChanged();
