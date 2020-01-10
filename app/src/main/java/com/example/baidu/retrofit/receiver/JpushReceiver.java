@@ -39,5 +39,4 @@ public class JpushReceiver extends JPushMessageReceiver {
         Log.d(TAG, notificationMessage.notificationContent);
     }
 
-
 }
