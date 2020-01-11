@@ -29,9 +29,10 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.os.StatFs;
-import android.support.v4.util.LruCache;
 import android.util.Log;
 import android.widget.ImageView;
+
+import androidx.collection.LruCache;
 
 import com.example.baidu.retrofit.R;
 

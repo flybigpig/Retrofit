@@ -2,8 +2,9 @@ package com.tool.cn.widget.image;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
+
+import androidx.appcompat.widget.AppCompatImageView;
 
 /**
  *  2017/4/12  16:58.

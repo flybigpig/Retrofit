@@ -1,13 +1,15 @@
 package com.tool.cn.widget.recycler;
 
 import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**recyclerview中的linear布局时用到的测量recyclerview高度
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+/**
+ * recyclerview中的linear布局时用到的测量recyclerview高度
  * Created by 关 on 2016/4/8.
  */
 public class CustomLinearLayoutManager extends LinearLayoutManager {

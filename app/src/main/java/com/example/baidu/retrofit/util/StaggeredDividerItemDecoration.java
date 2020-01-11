@@ -2,9 +2,10 @@ package com.example.baidu.retrofit.util;
 
 import android.content.Context;
 import android.graphics.Rect;
-import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class StaggeredDividerItemDecoration extends RecyclerView.ItemDecoration {
     private Context context;

@@ -1,7 +1,8 @@
 package com.example.baidu.retrofit.Activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.baidu.retrofit.R;
 import com.example.baidu.retrofit.Study.MyView;

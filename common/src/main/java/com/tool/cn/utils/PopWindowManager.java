@@ -5,12 +5,13 @@ import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.RequiresApi;
 
 import com.tool.cn.activity.BaseActivity;
 

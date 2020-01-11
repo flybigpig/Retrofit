@@ -25,7 +25,8 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
     //noinspection GradleCompatible
     //butterknife注解框架,https://github.com/JakeWharton/butterknife
-    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
     //一个为glide提供图片转换的Android类库，内部已依赖Glide，https://github.com/wasabeef/glide-transformations
     //https://github.com/bumptech/glide
     //compile 'jp.wasabeef:glide-transformations:2.0.1'

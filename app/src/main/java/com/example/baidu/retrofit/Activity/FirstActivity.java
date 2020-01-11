@@ -1,10 +1,10 @@
 package com.example.baidu.retrofit.Activity;
 
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.example.baidu.retrofit.Adapter.StaggeredHomeAdapter;
 import com.example.baidu.retrofit.Bean.GanhuoNews;
@@ -64,12 +64,6 @@ public class FirstActivity extends Rx2Activity {
 //        recycleView.setItemAnimator(new DefaultItemAnimator());
 //        firstAdapter = new FirstAdapter(mList);
 //        recycleView.setAdapter(firstAdapter);
-
-        recycleView.setLayoutManager(new StaggeredGridLayoutManager(3,
-                StaggeredGridLayoutManager.VERTICAL));
-        recycleView.setItemAnimator(new DefaultItemAnimator());
-        mStaggeredHomeAdapter = new StaggeredHomeAdapter(this, mList);
-        recycleView.setAdapter(mStaggeredHomeAdapter);
 
     }
 

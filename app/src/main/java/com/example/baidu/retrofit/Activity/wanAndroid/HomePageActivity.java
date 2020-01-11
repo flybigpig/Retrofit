@@ -1,15 +1,15 @@
 package com.example.baidu.retrofit.Activity.wanAndroid;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.ViewGroup;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.baidu.retrofit.Activity.Rx2Activity;
 import com.example.baidu.retrofit.Bean.GanhuoNews;
@@ -20,6 +20,7 @@ import com.example.baidu.retrofit.fragment.home.AndroidFragment;
 import com.example.baidu.retrofit.fragment.home.HomeFragment;
 import com.example.baidu.retrofit.util.BaseObserver;
 import com.example.baidu.retrofit.util.RetrofitUtil;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;

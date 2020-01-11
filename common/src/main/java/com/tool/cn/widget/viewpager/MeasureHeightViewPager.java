@@ -1,10 +1,11 @@
 package com.tool.cn.widget.viewpager;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import androidx.viewpager.widget.ViewPager;
 
 /**
  *  2017/5/2  13:52.

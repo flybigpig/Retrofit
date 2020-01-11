@@ -1,13 +1,14 @@
 package com.example.baidu.retrofit.Activity;
 
 import android.os.Bundle;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.baidu.retrofit.Adapter.ListActivityAdapter;
 import com.example.baidu.retrofit.Api;
@@ -86,6 +87,8 @@ public class MainActivity extends Rx2Activity {
         listString.add(new StudyBean("GanHuo", "", "url"));
 
         listString.add(new StudyBean("Share", "", "url"));
+
+        listString.add(new StudyBean("极光IM", "", "url"));
 
 
         activityAdapter.setNewData(listString);

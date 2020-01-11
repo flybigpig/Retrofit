@@ -1,6 +1,5 @@
 package com.example.baidu.retrofit.Activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.baidu.retrofit.R;

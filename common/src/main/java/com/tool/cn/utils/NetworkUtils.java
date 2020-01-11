@@ -10,10 +10,11 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringDef;
-import android.support.v7.app.AlertDialog;
 import android.telephony.TelephonyManager;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.StringDef;
+import androidx.appcompat.app.AlertDialog;
 
 import java.io.BufferedReader;
 import java.io.IOException;

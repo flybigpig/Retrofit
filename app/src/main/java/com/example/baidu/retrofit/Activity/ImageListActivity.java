@@ -1,9 +1,10 @@
 package com.example.baidu.retrofit.Activity;
 
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.example.baidu.retrofit.Adapter.FirstAdapter;
 import com.example.baidu.retrofit.Adapter.StaggeredHomeAdapter;

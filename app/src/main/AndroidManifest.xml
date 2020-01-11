@@ -36,6 +36,27 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -48,7 +69,8 @@
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="stateHidden|adjustResize"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".Activity.ShareCommonActivity"></activity>
+        <activity android:name=".Activity.JpushChatActivity"></activity>
+        <activity android:name=".Activity.ShareCommonActivity" />
         <activity android:name=".Activity.wanAndroid.WebViewActivity" />
         <activity android:name=".Activity.ImageSwitcherActivity" />
         <activity android:name=".Activity.wanAndroid.HomePageActivity" />
@@ -116,6 +138,22 @@
             android:name="cn.jpush.android.service.PushService"
             android:process=":multiprocess"
             tools:node="replace" /> <!-- Required. For publish channel feature -->
+
+
+        <!--        &lt;!&ndash; Required since JMessage 2.7.0 SDK 核心功能&ndash;&gt;-->
+        <!--        <provider-->
+        <!--            android:name="cn.jpush.im.android.helpers.ipc.IMProvider"-->
+        <!--            android:authorities="您自己的包名.IMProvider"-->
+        <!--            android:exported="false" />-->
+
+        <!--        &lt;!&ndash; Required JMessage SDK核心功能&ndash;&gt;-->
+        <!--        <receiver-->
+        <!--            android:name="cn.jpush.im.android.helpers.IMReceiver"-->
+        <!--            android:enabled="true"-->
+        <!--            android:exported="false">-->
+        <!--        </receiver>-->
+
+
         <!-- JPUSH_CHANNEL 是为了方便开发者统计 APK 分发渠道。 -->
         <!-- 例如: -->
         <!-- 发到 Google Play 的 APK 可以设置为 google-play; -->

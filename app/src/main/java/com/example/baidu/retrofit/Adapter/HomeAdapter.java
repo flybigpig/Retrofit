@@ -1,7 +1,6 @@
 package com.example.baidu.retrofit.Adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +9,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import java.util.List;
 import android.view.ViewGroup.LayoutParams;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.baidu.retrofit.R;
 
