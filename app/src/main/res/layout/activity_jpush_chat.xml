@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ll_menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:background="@color/white"
     android:orientation="vertical"
-    android:paddingLeft="8dp">
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
 
     <TextView
-        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
@@ -24,55 +23,97 @@
         android:textStyle="bold"
         android:typeface="serif" />
 
-<!--    <View-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="1px"-->
-<!--        android:background="@color/line" />-->
 
-<!--    <TextView-->
-<!--        android:id="@+id/register"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center_vertical"-->
-<!--        android:drawablePadding="5dp"-->
-<!--        android:gravity="center_vertical"-->
-<!--        android:text="register"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="16sp" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
-<!--    <TextView-->
-<!--        android:id="@+id/login"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center_vertical"-->
-<!--        android:drawablePadding="5dp"-->
-<!--        android:gravity="center_vertical"-->
-<!--        android:text="login"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="16sp" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/account" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/add"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center_vertical"-->
-<!--        android:drawablePadding="5dp"-->
-<!--        android:gravity="center_vertical"-->
-<!--        android:text="add"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="16sp" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/account"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_margin="10dp"
+                    android:hint="账号"
+                    android:textColorHint="@color/black"
+                    android:textSize="16dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
 
 
-<!--    <TextView-->
-<!--        android:id="@+id/create"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center_vertical"-->
-<!--        android:drawablePadding="5dp"-->
-<!--        android:gravity="center_vertical"-->
-<!--        android:text="create"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="16sp" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/password" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_margin="10dp"
+                    android:hint="密码"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/black"
+                    android:textSize="16dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="18dp"
+        android:background="@drawable/bg_btn"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:text="注册"
+        android:textColor="@color/deepskyblue"
+        android:textSize="18dp" />
 
 </LinearLayout>
