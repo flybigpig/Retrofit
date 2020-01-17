@@ -64,7 +64,8 @@
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="stateHidden|adjustResize"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".Activity.jpush.ChatUIActivity"></activity>
+        <activity android:name=".Activity.SurfaceViewActivity"></activity>
+        <activity android:name=".Activity.jpush.ChatUIActivity" />
         <activity android:name=".Activity.jpush.RegisterActivity" />
         <activity android:name=".Activity.jpush.JpushChatActivity" />
         <activity android:name=".Activity.ShareCommonActivity" />

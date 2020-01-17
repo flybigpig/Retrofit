@@ -1,1 +1,1 @@
-include ':app', ':common', ':rxbus', ':utils', ':myapplication'
+include ':app', ':common', ':rxbus', ':utils', ':Java'

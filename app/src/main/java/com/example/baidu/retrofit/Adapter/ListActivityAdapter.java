@@ -1,5 +1,6 @@
 package com.example.baidu.retrofit.Adapter;
 
+import android.view.SurfaceView;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -7,6 +8,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.baidu.retrofit.Activity.CustonViewBserActivity;
 import com.example.baidu.retrofit.Activity.ImageListActivity;
 import com.example.baidu.retrofit.Activity.ImageSwitcherActivity;
+import com.example.baidu.retrofit.Activity.SurfaceViewActivity;
 import com.example.baidu.retrofit.Activity.jpush.JpushChatActivity;
 import com.example.baidu.retrofit.Activity.LoadMoreActivity;
 import com.example.baidu.retrofit.Activity.wanAndroid.HomePageActivity;
@@ -49,6 +51,9 @@ public class ListActivityAdapter extends BaseQuickAdapter<StudyBean, BaseViewHol
                 break;
             case 6:
                 IntentUtils.openActivity(mContext, JpushChatActivity.class);
+                break;
+            case 7:
+                IntentUtils.openActivity(mContext, SurfaceViewActivity.class);
                 break;
         }
 

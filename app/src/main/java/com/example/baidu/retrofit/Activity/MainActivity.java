@@ -90,6 +90,8 @@ public class MainActivity extends Rx2Activity {
 
         listString.add(new StudyBean("极光IM", "", "url"));
 
+        listString.add(new StudyBean("surface", "", "url"));
+
 
         activityAdapter.setNewData(listString);
         activityAdapter.notifyDataSetChanged();

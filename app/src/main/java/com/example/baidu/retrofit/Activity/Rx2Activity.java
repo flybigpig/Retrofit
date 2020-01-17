@@ -55,7 +55,15 @@ public abstract class Rx2Activity extends BaseActivity {
 
     @Override
     protected void init() {
-//        String appLan = PreferencesManager.getInstance(mContext).get(Constants.APP_LAN);
+
+    }
+
+    @Override
+    protected void getHttp() {
+
+    }
+
+    //    String appLan = PreferencesManager.getInstance(mContext).get(Constants.APP_LAN);
 //        prop = FileUtils.loadPropertiesFile(Constants.DOWNLOAD_PATH + Constants.FILE_PATH, appLan);
 //        if (prop != null) {
 //            Constants.nationalizationData(prop);
@@ -64,7 +72,7 @@ public abstract class Rx2Activity extends BaseActivity {
 //            PreferencesManager.getInstance(this).put(Constants.IS_FIRST_LOAD, true);
 //            PreferencesManager.getInstance(mContext).put(appLan, 0L);
 //        }
-    }
+
 
     /**
      * 国际化数据

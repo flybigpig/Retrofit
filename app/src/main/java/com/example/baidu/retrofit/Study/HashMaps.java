@@ -3,14 +3,13 @@ package com.example.baidu.retrofit.Study;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HashMaps extends HashMap implements Map {
+public class HashMaps {
 
     /**
      * 分析 HashMap
      * <p>
      * 比较 SparseArray
      *
-
      *HashMap 和 LinkedHashMap 相关：
 
      java为数据结构中的映射定义了一个接口java.util.Map;
@@ -45,10 +44,17 @@ public class HashMaps extends HashMap implements Map {
 
     /**
      * <a href="{@docRoot}openjdk-redirect.html?v=8&path=/technotes/guides/collections/index.html">
+     *
      * @param initialCapacity
      * @param loadFactor
      */
-    public HashMaps(int initialCapacity, float loadFactor) {
-        super(initialCapacity, loadFactor);
+
+
+    static HashMap<String, String> mHashMap = new HashMap<>();
+
+
+    public static void main(String[] args) {
+
+
     }
 }
