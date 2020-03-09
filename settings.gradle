@@ -1,1 +1,2 @@
-include ':app', ':common', ':rxbus', ':utils', ':Java'
+include ':app', ':common', ':rxbus', ':utils', ':Java1'
+project(':Java1').projectDir = new File('Java')

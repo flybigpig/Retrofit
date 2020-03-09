@@ -12,6 +12,12 @@ public class isOdd {
         System.out.println(isOdd(5));
     }
 
+    /**
+     * 判断奇偶
+     *
+     * @param i
+     * @return
+     */
     public static boolean isOdd(int i) {
         return (i & 1) != 0;
     }
