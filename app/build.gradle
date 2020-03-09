@@ -97,7 +97,7 @@ dependencies {
     // tencent X5 webview
     implementation 'com.just.agentwebX5:agentwebX5:2.0.0'
 
-    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.1'
 
     implementation project(path: ':common')
     implementation project(path: ':rxbus')
