@@ -103,7 +103,7 @@ public class BitmapUtil {
     /**
      * Bitmap转Drawable
      */
-    public Drawable btimapToDrawable(Bitmap bitmap) {
+    public static Drawable btimapToDrawable(Bitmap bitmap ,Context context) {
         return new BitmapDrawable(context.getResources(), bitmap);
     }
 
