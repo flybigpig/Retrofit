@@ -46,6 +46,7 @@ public class HomeFragment extends BaseFragment {
     @BindView(R.id.recycleView)
     RecyclerView recycleView;
     private HomeAdapter mHomeAdapter;
+    private String REPORT_FRAGMENT_TAG="home";
 
     public HomeFragment getInstance(String type) {
         HomeFragment f = new HomeFragment();
@@ -61,6 +62,7 @@ public class HomeFragment extends BaseFragment {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_fragment);
     }
+
 
     @Override
     protected void initView() {
@@ -94,4 +96,28 @@ public class HomeFragment extends BaseFragment {
         }
 
     }
+
+
+    private void test() {
+
+//        android.app.FragmentManager manager = getActivity().getFragmentManager();
+//        if (manager.findFragmentByTag(REPORT_FRAGMENT_TAG) == null) {
+//            manager.beginTransaction().add(new HomeFragment(), REPORT_FRAGMENT_TAG).commit();
+//            // Hopefully, we are the first to make a transaction.
+//            manager.executePendingTransactions();
+//        }
+
+//        RxPermissionsFragment rxPermissionsFragment = findRxPermissionsFragment(fragmentManager);
+//        boolean isNewInstance = rxPermissionsFragment == null;
+//        if (isNewInstance) {
+//            rxPermissionsFragment = new RxPermissionsFragment();
+//            fragmentManager
+//                    .beginTransaction()
+//                    .add(rxPermissionsFragment, TAG)
+//                    .commitNow();
+//        }
+//        return rxPermissionsFragment;
+    }
+
+
 }

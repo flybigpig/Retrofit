@@ -1,5 +1,6 @@
 package com.example.baidu.retrofit.Adapter;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.widget.ImageView;
 
@@ -7,6 +8,7 @@ import androidx.annotation.Nullable;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.baidu.retrofit.Bean.GanhuoNews;
 import com.example.baidu.retrofit.R;
 import com.example.baidu.retrofit.util.bitmap.AsyncDrawable;
@@ -18,6 +20,7 @@ import java.util.List;
 public class GanhuoApiAdapter extends BaseQuickAdapter<GanhuoNews, BaseViewHolder> {
 
     private int resId = R.drawable.ic_placeholer;
+    private Context mContext;
 
     public GanhuoApiAdapter(@Nullable List<GanhuoNews> data) {
         super(R.layout.item_ganhuo, data);

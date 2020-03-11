@@ -92,6 +92,8 @@ public class MainActivity extends Rx2Activity {
 
         listString.add(new StudyBean("surface", "", "url"));
 
+        listString.add(new StudyBean("RecycleView 流式布局", "", "url"));
+
 
         activityAdapter.setNewData(listString);
         activityAdapter.notifyDataSetChanged();
