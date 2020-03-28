@@ -24,8 +24,6 @@ import java.util.List;
  */
 public class AutoVerticalScrollImageView extends ImageSwitcher implements ViewSwitcher.ViewFactory {
 
-    private Context mContext;
-
     //mInUp,mOutUp分别构成向下翻页的进出动画
     private Rotate3dAnimation mInUp;
     private Rotate3dAnimation mOutUp;
@@ -36,8 +34,6 @@ public class AutoVerticalScrollImageView extends ImageSwitcher implements ViewSw
 
     public AutoVerticalScrollImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
-
-        mContext = context;
         init();
 
     }
@@ -76,7 +72,9 @@ public class AutoVerticalScrollImageView extends ImageSwitcher implements ViewSw
             if (msg.what == 199) {
                 next();
                 number++; // 切换现实的index
-                setImageResource(list.get(number % list.size()));
+                if (list.size() > 0) {
+                    setImageResource(list.get(number % list.size()));
+                }
             }
         }
     };
@@ -125,7 +123,7 @@ public class AutoVerticalScrollImageView extends ImageSwitcher implements ViewSw
 
     //这里返回的ImageView，就是我们看到的View,可以设置自己想要的效果
     public View makeView() {
-        ImageView imageView = new ImageView(mContext);
+        ImageView imageView = new ImageView(getContext().getApplicationContext());
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
        /* TextView textView = new TextView(mContext);
         textView.setGravity(Gravity.LEFT);
@@ -193,6 +191,7 @@ public class AutoVerticalScrollImageView extends ImageSwitcher implements ViewSw
             matrix.postTranslate(centerX, centerY);
         }
     }
+
 
 }
  

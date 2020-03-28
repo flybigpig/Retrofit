@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transpant"
+    android:gravity="center"
+    android:minWidth="@dimen/width_200"
+    android:minHeight="@dimen/height_200"
+    android:orientation="vertical">
+
+    <com.graduation.payment.property.view.HwLoadingView
+        android:layout_width="@dimen/width_100"
+        android:layout_height="@dimen/height_100" />
+
+</LinearLayout>

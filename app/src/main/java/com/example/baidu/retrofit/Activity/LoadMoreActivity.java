@@ -51,7 +51,7 @@ public class LoadMoreActivity extends Rx2Activity {
     protected void init() {
         super.init();
         listGanHuos = new ArrayList<>();
-        ganHuoAdapter = new GanhuoApiAdapter(null);
+        ganHuoAdapter = new GanhuoApiAdapter(getApplicationContext(), null);
         recycleView.setLayoutManager(new LinearLayoutManager(mContext));
         //设置分隔线
         recycleView.addItemDecoration(new DividerGridItemDecoration(this));

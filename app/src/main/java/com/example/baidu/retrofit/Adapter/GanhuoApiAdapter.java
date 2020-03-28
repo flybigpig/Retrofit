@@ -22,8 +22,9 @@ public class GanhuoApiAdapter extends BaseQuickAdapter<GanhuoNews, BaseViewHolde
     private int resId = R.drawable.ic_placeholer;
     private Context mContext;
 
-    public GanhuoApiAdapter(@Nullable List<GanhuoNews> data) {
+    public GanhuoApiAdapter(Context context, @Nullable List<GanhuoNews> data) {
         super(R.layout.item_ganhuo, data);
+        this.mContext = context;
     }
 
     @Override

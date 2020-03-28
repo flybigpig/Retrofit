@@ -3,14 +3,10 @@ package com.example.baidu.retrofit.Activity;
 import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.net.ConnectivityManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.baidu.retrofit.Constants;
-import com.example.baidu.retrofit.R;
 import com.example.baidu.retrofit.receiver.NetworkConnectChangedReceiver;
 import com.example.baidu.retrofit.util.Event;
 import com.threshold.rxbus2.RxBus;

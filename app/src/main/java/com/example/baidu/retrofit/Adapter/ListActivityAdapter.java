@@ -1,11 +1,14 @@
 package com.example.baidu.retrofit.Adapter;
 
+import android.app.Application;
+import android.content.Context;
 import android.view.SurfaceView;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.baidu.retrofit.Activity.CustonViewBserActivity;
+import com.example.baidu.retrofit.Activity.DataBindingActivity;
 import com.example.baidu.retrofit.Activity.ImageListActivity;
 import com.example.baidu.retrofit.Activity.ImageSwitcherActivity;
 import com.example.baidu.retrofit.Activity.RecycleViewFlowActivity;
@@ -21,9 +24,11 @@ import java.util.List;
 
 public class ListActivityAdapter extends BaseQuickAdapter<StudyBean, BaseViewHolder> implements BaseQuickAdapter.OnItemClickListener {
 
+    private Context mContext;
 
-    public ListActivityAdapter(List<StudyBean> data) {
+    public ListActivityAdapter(Context application, List<StudyBean> data) {
         super(R.layout.item_main, data);
+        this.mContext = application;
         setOnItemClickListener(this);
     }
 
@@ -58,6 +63,9 @@ public class ListActivityAdapter extends BaseQuickAdapter<StudyBean, BaseViewHol
                 break;
             case 8:
                 IntentUtils.openActivity(mContext, RecycleViewFlowActivity.class);
+                break;
+            case 9:
+                IntentUtils.openActivity(mContext, DataBindingActivity.class);
                 break;
         }
 

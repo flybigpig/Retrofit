@@ -73,12 +73,6 @@ public class MyView extends View {
                 controlPoint.y = (int) event.getY();
                 invalidate();
                 break;
-            case MotionEvent.ACTION_CANCEL:
-                offsetLeftAndRight(0);
-                offsetTopAndBottom(0);
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + event.getAction());
         }
         return true;
     }
@@ -86,8 +80,8 @@ public class MyView extends View {
     @Override
     public void computeScroll() {
         super.computeScroll();
-        if(mScroller.computeScrollOffset()){
-            ((View)getParent()).scrollTo(mScroller.getCurrX(),mScroller.getCurrY());
+        if (mScroller.computeScrollOffset()) {
+            ((View) getParent()).scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
             invalidate();
         }
 

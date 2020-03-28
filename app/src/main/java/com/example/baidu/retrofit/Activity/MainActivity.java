@@ -20,6 +20,7 @@ import com.tool.cn.utils.GlideImageManager;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.Timer;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,7 +49,6 @@ public class MainActivity extends Rx2Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
     }
 
 
@@ -61,7 +61,7 @@ public class MainActivity extends Rx2Activity {
     protected void init() {
         super.init();
         listString = new ArrayList<>();
-        activityAdapter = new ListActivityAdapter(null);
+        activityAdapter = new ListActivityAdapter(getApplicationContext(), null);
         recycleView.setLayoutManager(new LinearLayoutManager(mContext));
         //设置分隔线
         recycleView.addItemDecoration(new DividerGridItemDecoration(this));
@@ -102,6 +102,14 @@ public class MainActivity extends Rx2Activity {
 
     @Override
     protected void getHttp() {
+
+    }
+
+    /**
+     * 开启获取网速定时器
+     */
+    public void startSpeedTimer() {
+
 
     }
 

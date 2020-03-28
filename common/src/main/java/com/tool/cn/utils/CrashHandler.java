@@ -23,7 +23,6 @@ import java.util.zip.ZipOutputStream;
 
 /**
  * 异常捕捉
- *
  */
 public class CrashHandler implements Thread.UncaughtExceptionHandler {
 
@@ -128,20 +127,20 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         out = new ZipOutputStream(new FileOutputStream(outFile));
         if (fileOrDirectory.isFile()) {
             zipFileOrDirectory(out, fileOrDirectory, "");
-        }else {
+        } else {
             File[] entries = fileOrDirectory.listFiles();
             for (int i = 0; i < entries.length; i++) {
                 zipFileOrDirectory(out, entries[i], "");
             }
         }
-        if(null != out){
+        if (null != out) {
             out.close();
         }
     }
 
-    private static void zipFileOrDirectory(ZipOutputStream out,File fileOrDirectory, String curPath) throws IOException {
+    private static void zipFileOrDirectory(ZipOutputStream out, File fileOrDirectory, String curPath) throws IOException {
         FileInputStream in = null;
-        if (!fileOrDirectory.isDirectory()){
+        if (!fileOrDirectory.isDirectory()) {
             byte[] buffer = new byte[4096];
             int bytes_read;
             in = new FileInputStream(fileOrDirectory);
@@ -151,13 +150,13 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
                 out.write(buffer, 0, bytes_read);
             }
             out.closeEntry();
-        }else{
+        } else {
             File[] entries = fileOrDirectory.listFiles();
             for (int i = 0; i < entries.length; i++) {
                 zipFileOrDirectory(out, entries[i], curPath + fileOrDirectory.getName() + "/");
             }
         }
-        if (null != in){
+        if (null != in) {
             in.close();
         }
     }

@@ -59,4 +59,9 @@ public class ImageSwitcherActivity extends Rx2Activity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        imageSwitcher = null;
+    }
 }
