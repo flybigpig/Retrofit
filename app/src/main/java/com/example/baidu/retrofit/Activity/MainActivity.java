@@ -76,24 +76,6 @@ public class MainActivity extends Rx2Activity {
 
     private void initData() {
 
-        listString.add(new StudyBean("recycleView加载更多", "", "url"));
-
-        listString.add(new StudyBean("图片流式布局", "", "url"));
-
-        listString.add(new StudyBean("贝塞尔曲线", "", "url"));
-
-        listString.add(new StudyBean("ImageSwitcer", "", "url"));
-
-        listString.add(new StudyBean("GanHuo", "", "url"));
-
-        listString.add(new StudyBean("Share", "", "url"));
-
-        listString.add(new StudyBean("极光IM", "", "url"));
-
-        listString.add(new StudyBean("surface", "", "url"));
-
-        listString.add(new StudyBean("RecycleView 流式布局", "", "url"));
-
 
         activityAdapter.setNewData(listString);
         activityAdapter.notifyDataSetChanged();

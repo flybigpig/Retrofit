@@ -3,7 +3,7 @@ package com.example.baidu.retrofit.util;
 import android.database.sqlite.SQLiteException;
 import android.text.TextUtils;
 
-import com.example.baidu.retrofit.Activity.FirstActivity;
+import com.example.baidu.retrofit.Activity.other.FirstActivity;
 import com.example.baidu.retrofit.Activity.Rx2Activity;
 import com.example.baidu.retrofit.Bean.ResultBean;
 import com.example.baidu.retrofit.Constants;

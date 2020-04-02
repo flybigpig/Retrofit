@@ -151,5 +151,5 @@
     <color name="navy">#000080</color> <!-- 海军色 -->
     <color name="black">#000000</color>
     <color name="deepOrange">#000000</color>
-    <color name="transpant">#424242</color> <!-- 黑色 -->
+    <color name="transpant">#D9ffffff</color>
 </resources>

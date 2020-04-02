@@ -4,11 +4,9 @@
     android:layout_height="wrap_content"
     android:background="@color/transpant"
     android:gravity="center"
-    android:minWidth="@dimen/width_200"
-    android:minHeight="@dimen/height_200"
     android:orientation="vertical">
 
-    <com.graduation.payment.property.view.HwLoadingView
+    <com.example.baidu.retrofit.View.HwLoadingView
         android:layout_width="@dimen/width_100"
         android:layout_height="@dimen/height_100" />
 

@@ -2,14 +2,9 @@ package com.example.baidu.retrofit.util;
 
 import android.util.Log;
 
-import com.example.baidu.retrofit.Api;
-import com.example.baidu.retrofit.BuildConfig;
-import com.tool.cn.utils.LogUtils;
+import com.example.baidu.retrofit.Bpi;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.util.concurrent.TimeUnit;
 
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -26,18 +21,18 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitUtil {
     private volatile static RetrofitUtil sInstance;
     private Retrofit mRetrofit;
-    private Api mTestService;
+    private Bpi mTestService;
     private OkHttpClient mClient;
     private String TAG = "OKHTTP";
 
     private RetrofitUtil() {
         mRetrofit = new Retrofit.Builder()
-                .baseUrl(Api.surl)
+                .baseUrl(Bpi.surl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(OkHttpClient())
                 .build();
-        mTestService = mRetrofit.create(Api.class);
+        mTestService = mRetrofit.create(Bpi.class);
     }
 
     public static RetrofitUtil getInstance() {
@@ -51,7 +46,7 @@ public class RetrofitUtil {
         return sInstance;
     }
 
-    public static Api getTestService() {
+    public static Bpi getTestService() {
         return getInstance().mTestService;
     }
 

@@ -1,7 +1,6 @@
 package com.example.baidu.retrofit.Adapter.home;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -11,9 +10,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.baidu.retrofit.Activity.wanAndroid.WebViewActivity;
 import com.example.baidu.retrofit.Bean.home.AndroidBean;
-import com.example.baidu.retrofit.Bean.home.ArticalBean;
 import com.example.baidu.retrofit.R;
-import com.tool.cn.utils.GlideImageManager;
 
 import java.util.List;
 
@@ -36,12 +33,12 @@ public class HomeAdapter extends BaseQuickAdapter<AndroidBean, BaseViewHolder> i
     protected void convert(BaseViewHolder helper, AndroidBean item) {
         helper.setText(R.id.title, item.getDesc());
         ImageView imageView = helper.getView(R.id.image);
-        if (item.getImages() != null && item.getImages().size() > 0) {
-            GlideImageManager.loadImage(mContext, item.getImages().get(0), imageView);
-        } else {
-            helper.setGone(R.id.image, false);
+//        if (item.getImages() != null && item.getImages().size() > 0) {
+//            GlideImageManager.loadImage(mContext, item.getImages().get(0), imageView);
+//        } else {
+//            helper.setGone(R.id.image, false);
 //            GlideImageManager.loadImage(mContext, R.drawable.ic_placeholer, imageView);
-        }
+//        }
     }
 
     @Override

@@ -1,13 +1,22 @@
 package com.eyes.see.java;
 
+import java.util.Random;
+
 public class MyClass {
+
 
     public static void main(String[] args) {
 
-        int a = 1;
+        System.out.println(test2.b);
 
-        int b = -2;
-
-        System.out.println(23);
     }
 }
+
+interface test1 {
+    int a = 1;
+}
+
+interface test2 extends test1 {
+    int b = new Random().nextInt(12);
+}
+

@@ -1,10 +1,7 @@
 package com.example.baidu.retrofit;
 
 import android.app.Application;
-import android.util.Log;
 
-import com.squareup.leakcanary.LeakCanary;
-import com.tencent.smtt.sdk.QbSdk;
 import com.tool.cn.utils.CrashHandler;
 import com.tool.cn.utils.LogUtils;
 
@@ -34,12 +31,12 @@ public class MyApplication extends Application {
         JMessageClient.setDebugMode(true);
         JMessageClient.init(this);
 
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
-            return;
-        }
-        LeakCanary.install(this);
+//        if (LeakCanary.isInAnalyzerProcess(this)) {
+//            // This process is dedicated to LeakCanary for heap analysis.
+//            // You should not init your app in this process.
+//            return;
+//        }
+//        LeakCanary.install(this);
 
 
 //        //搜集本地tbs内核信息并上报服务器，服务器返回结果决定使用哪个内核。
