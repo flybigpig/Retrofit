@@ -1,8 +1,8 @@
 package com.tool.cn.fragment;
 
 import android.app.Activity;
-
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,8 +18,7 @@ import androidx.fragment.app.Fragment;
 import butterknife.ButterKnife;
 
 /**
- *  2017/3/9  17:48.
- *
+ * 2017/3/9  17:48.
  *
  * @version 1.0.0
  * @class BaseFragment
@@ -85,7 +84,8 @@ public abstract class BaseFragment extends Fragment {
         ButterKnife.bind(this, mView);
         initView();
         isInitView = true;//表示视图初始化完成
-        if (isLoadOnlyOnce()) {
+        Log.d("LazyLoad", !isHidden() + "");
+        if (isLoadOnlyOnce() && !isHidden() && isVisible()) {
             getHttpData();
         }
     }

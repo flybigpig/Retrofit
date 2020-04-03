@@ -5,8 +5,10 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.example.baidu.retrofit.Activity.wanAndroid.HomePageActivity;
 import com.example.baidu.retrofit.Bean.StudyBean;
 import com.example.baidu.retrofit.R;
+import com.tool.cn.utils.IntentUtils;
 
 import java.util.List;
 
@@ -25,7 +27,9 @@ public class ListActivityAdapter extends BaseQuickAdapter<StudyBean, BaseViewHol
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
         StudyBean studyBean = (StudyBean) adapter.getData().get(position);
         switch (position) {
-
+            case 0:
+                IntentUtils.openActivity(mContext, HomePageActivity.class);
+                break;
         }
 
     }

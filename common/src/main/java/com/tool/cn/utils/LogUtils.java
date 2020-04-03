@@ -1,8 +1,7 @@
 package com.tool.cn.utils;
 
 /**
- *  2017/2/22  11:28.
- *
+ * 2017/2/22  11:28.
  *
  * @version 1.0.0
  * @class LogUtils

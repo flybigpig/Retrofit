@@ -103,4 +103,5 @@ public class ResultBean<T> {
     public void setCount(int count) {
         this.count = count;
     }
+
 }

@@ -20,11 +20,8 @@ import com.tool.cn.utils.GlideImageManager;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import java.util.Timer;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class MainActivity extends Rx2Activity {
 
@@ -75,6 +72,8 @@ public class MainActivity extends Rx2Activity {
     }
 
     private void initData() {
+
+        listString.add(new StudyBean("GanHuo", "", "url"));
 
 
         activityAdapter.setNewData(listString);

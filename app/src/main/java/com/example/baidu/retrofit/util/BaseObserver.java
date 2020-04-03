@@ -3,8 +3,8 @@ package com.example.baidu.retrofit.util;
 import android.database.sqlite.SQLiteException;
 import android.text.TextUtils;
 
-import com.example.baidu.retrofit.Activity.other.FirstActivity;
 import com.example.baidu.retrofit.Activity.Rx2Activity;
+import com.example.baidu.retrofit.Activity.other.FirstActivity;
 import com.example.baidu.retrofit.Bean.ResultBean;
 import com.example.baidu.retrofit.Constants;
 import com.google.gson.JsonSyntaxException;
@@ -78,8 +78,8 @@ public abstract class BaseObserver<T> implements Observer<ResultBean<T>> {
 
     /**
      * 防止重复请求
-     *  @param rx2Activity
      *
+     * @param rx2Activity
      */
     public BaseObserver(Rx2Activity rx2Activity) {
         this.rx2Activity = rx2Activity;
@@ -117,6 +117,7 @@ public abstract class BaseObserver<T> implements Observer<ResultBean<T>> {
         if (response.code == RESPONSE_CODE_OK) {
             ToastUtils.showToastOnce(rx2Activity, response.msg);
             onIsSuccess(response.success);
+
             if (response.extend != null) {
                 onCompatSuccess(response.extend);
             }
@@ -124,6 +125,7 @@ public abstract class BaseObserver<T> implements Observer<ResultBean<T>> {
                 onSuccess(response.items);
             } else if (response.data != null) {
                 onSuccess(response.data);
+
             }
             if (response.results != null) {
                 onSuccess(response.results);
@@ -132,6 +134,7 @@ public abstract class BaseObserver<T> implements Observer<ResultBean<T>> {
             onFailure(response.code, response.msg);
         }
     }
+
 
     @Override
     public void onError(Throwable e) {

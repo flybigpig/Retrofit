@@ -42,19 +42,7 @@ public class TestRecycleViewAdapter extends RecyclerView.Adapter<TestRecycleView
         return holder;
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        // holder 存在复用问题 ，需要防止混乱
-
-        ViewGroup.LayoutParams lp = holder.mTextView.getLayoutParams();
-
-        lp.height = heights.get(position);
-
-        holder.mTextView.setLayoutParams(lp);
-
-        holder.mTextView.setText(mList.get(position));
-    }
 
 
     @Override
@@ -70,6 +58,20 @@ public class TestRecycleViewAdapter extends RecyclerView.Adapter<TestRecycleView
             super(itemView);
             mTextView = (TextView) itemView.findViewById(R.id.textview);
         }
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
+        // holder 存在复用问题 ，需要防止混乱
+
+        ViewGroup.LayoutParams lp = holder.mTextView.getLayoutParams();
+
+        lp.height = heights.get(position);
+
+        holder.mTextView.setLayoutParams(lp);
+
+        holder.mTextView.setText(mList.get(position));
     }
 
     private List randomHeight() {

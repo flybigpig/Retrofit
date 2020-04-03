@@ -64,7 +64,8 @@
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="stateHidden|adjustResize"
         tools:replace="android:appComponentFactory">
-        <activity android:name=".Activity.other.DataBindingActivity"></activity>
+        <activity android:name=".Activity.wanAndroid.ArticalHistoryActivity"></activity>
+        <activity android:name=".Activity.other.DataBindingActivity" />
         <activity android:name=".Activity.other.RecycleViewFlowActivity" />
         <activity android:name=".Activity.other.SurfaceViewActivity" />
         <activity android:name=".Activity.jpush.ChatUIActivity" />

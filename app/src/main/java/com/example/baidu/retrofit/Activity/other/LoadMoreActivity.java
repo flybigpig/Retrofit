@@ -125,7 +125,7 @@ public class LoadMoreActivity extends Rx2Activity {
 //                ganHuoAdapter.notifyDataSetChanged();
 //            }
 //        });
-//
+
 //    }
 //
 //    @Override
