@@ -8,11 +8,14 @@ import com.example.baidu.retrofit.Bean.home.ArticleBean;
 import com.example.baidu.retrofit.Bean.home.BannerBean;
 import com.example.baidu.retrofit.Bean.home.DataBean;
 import com.example.baidu.retrofit.Bean.home.GongZhongHao;
+import com.example.baidu.retrofit.Bean.home.UserBean;
 
 import java.util.List;
 
 import io.reactivex.Observable;
 import okhttp3.MultipartBody;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
@@ -34,6 +37,10 @@ public interface Bpi {
 
 
     String surl = "https://www.wanandroid.com/";
+
+    @POST("user/login")
+    @FormUrlEncoded
+    Observable<com.example.baidu.retrofit.Bean.home.ResultBean<UserBean>> login(@Field("username") String username, @Field("password") String password);
 
 
     @GET("banner/json")
