@@ -16,6 +16,8 @@ public class Constants {
     public static String noNetwork;
     public static int getCaptcha;
 
+    public static String surl = "https://www.wanandroid.com/";
+
     public static void nationalizationData(Properties prop) {
     }
 }

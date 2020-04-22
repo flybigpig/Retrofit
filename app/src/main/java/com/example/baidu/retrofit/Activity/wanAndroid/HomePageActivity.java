@@ -8,6 +8,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
@@ -20,10 +22,9 @@ import com.example.baidu.retrofit.Adapter.home.BannerAdapter;
 import com.example.baidu.retrofit.Adapter.home.FragmentAdapter;
 import com.example.baidu.retrofit.Bean.home.BannerBean;
 import com.example.baidu.retrofit.R;
-import com.example.baidu.retrofit.fragment.home.FirstFragment;
+import com.example.baidu.retrofit.fragment.home.ArticalFragment;
 import com.example.baidu.retrofit.util.BaseObserver;
 import com.example.baidu.retrofit.util.RetrofitUtil;
-import com.google.android.material.tabs.TabLayout;
 import com.tool.cn.utils.GlideImageManager;
 
 import java.util.ArrayList;
@@ -32,18 +33,21 @@ import java.util.Properties;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
 public class HomePageActivity extends Rx2Activity {
 
 
-    @BindView(R.id.tabLayout)
-    TabLayout tab;
-    @BindView(R.id.viewpager)
-    ViewPager viewPager;
     @BindView(R.id.viewpager_1)
     ViewPager viewpager1;
+    @BindView(R.id.news)
+    Button news;
+    @BindView(R.id.projects)
+    Button projects;
+    @BindView(R.id.fragment)
+    FrameLayout fragment;
 
     private Handler mHandler = new Handler() {
         @Override
@@ -62,6 +66,7 @@ public class HomePageActivity extends Rx2Activity {
     private FragmentAdapter mAdapter;
     private BannerAdapter mAdapter1;
     private List<View> views = new ArrayList<>();
+    private ArticalFragment mArticalFragment;
 
 
     @Override
@@ -74,34 +79,17 @@ public class HomePageActivity extends Rx2Activity {
     @Override
     protected void init() {
         super.init();
-
-        fragments.add(new FirstFragment());
-
-        titles.add("公众号");
-
-        mAdapter = new FragmentAdapter(getSupportFragmentManager(), fragments, titles, mContext);
-
-        viewPager.setAdapter(mAdapter);
-        tab.setupWithViewPager(viewPager);
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                tab.getTabAt(position).select();
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-        viewPager.setCurrentItem(0);
-
         timer();
+        initFragment();
+    }
+
+    private void initFragment() {
+        mArticalFragment = new ArticalFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.add(R.id.fragment, mArticalFragment);
+        transaction.commit();
+        transaction.show(mArticalFragment);
     }
 
     private void timer() {
@@ -172,5 +160,42 @@ public class HomePageActivity extends Rx2Activity {
 //        ft.commitAllowingStateLoss();
     }
 
+    private void oldPage() {
+//        fragments.add(new FirstFragment());
+//
+//        titles.add("公众号");
+//
+//
+//        mAdapter = new FragmentAdapter(getSupportFragmentManager(), fragments, titles, mContext);
+//
+//        viewpager.setAdapter(mAdapter);
+//        viewpager.clearAnimation();
+//        viewpager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//            @Override
+//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//
+//            }
+//
+//            @Override
+//            public void onPageSelected(int position) {
+//            }
+//
+//            @Override
+//            public void onPageScrollStateChanged(int state) {
+//
+//            }
+//        });
+//        viewpager.setCurrentItem(0);
+    }
 
+
+    @OnClick({R.id.news, R.id.projects})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.news:
+                break;
+            case R.id.projects:
+                break;
+        }
+    }
 }

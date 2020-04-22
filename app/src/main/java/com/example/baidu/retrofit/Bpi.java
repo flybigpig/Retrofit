@@ -7,6 +7,7 @@ import com.example.baidu.retrofit.Bean.home.AndroidBean;
 import com.example.baidu.retrofit.Bean.home.ArticleBean;
 import com.example.baidu.retrofit.Bean.home.BannerBean;
 import com.example.baidu.retrofit.Bean.home.DataBean;
+import com.example.baidu.retrofit.Bean.home.DatasBean;
 import com.example.baidu.retrofit.Bean.home.GongZhongHao;
 
 import java.util.List;
@@ -35,6 +36,8 @@ public interface Bpi {
 
     String surl = "https://www.wanandroid.com/";
 
+    @GET("article/list/{page}/json")
+    Observable<ArticleBean<DataBean>> getWanArtical(@Path("page") int page);
 
     @GET("banner/json")
     Observable<ResultBean<List<BannerBean>>> getBanner();

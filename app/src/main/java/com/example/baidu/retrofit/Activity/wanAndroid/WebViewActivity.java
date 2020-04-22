@@ -2,12 +2,15 @@ package com.example.baidu.retrofit.Activity.wanAndroid;
 
 import android.graphics.PixelFormat;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.TextView;
 
 import com.example.baidu.retrofit.R;
 import com.tool.cn.activity.BaseActivity;
@@ -43,11 +46,13 @@ public class WebViewActivity extends BaseActivity {
 
         //自己处理所有的网络请求，而不是打开浏览器
         WebViewClient client = new WebViewClient() {
+
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
                 return true;
             }
+
         };
         webView.setWebViewClient(client);
         String url = bundle.getString("url");
@@ -66,6 +71,9 @@ public class WebViewActivity extends BaseActivity {
                     }
                 }
         );
+
+//        TextView title = (TextView) findViewById(R.id.title);
+//        title.setSelected(true);
     }
 
     @Override

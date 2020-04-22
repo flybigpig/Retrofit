@@ -85,7 +85,7 @@ public abstract class BaseFragment extends Fragment {
         initView();
         isInitView = true;//表示视图初始化完成
         Log.d("LazyLoad", !isHidden() + "");
-        if (isLoadOnlyOnce() && !isHidden() && isVisible()) {
+        if (isLoadOnlyOnce() && isInitView) {
             getHttpData();
         }
     }

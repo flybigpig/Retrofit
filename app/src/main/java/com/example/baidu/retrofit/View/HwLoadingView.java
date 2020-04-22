@@ -58,7 +58,7 @@ public class HwLoadingView extends View {
     private void initAttrs(Context context, AttributeSet attrs) {
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.HwLoadingView);
 
-        mSize = (int) ta.getDimension(R.styleable.HwLoadingView_size, dp2px(context, 100));
+        mSize = (int) ta.getDimension(R.styleable.HwLoadingView_size, dp2px(context, 50));
         setSize(mSize);
 
         mColor = ta.getColor(R.styleable.HwLoadingView_color, Color.parseColor("#CCCCCC"));
@@ -67,6 +67,10 @@ public class HwLoadingView extends View {
         mDuration = ta.getInt(R.styleable.HwLoadingView_duration, 1500);
 
         ta.recycle();
+    }
+
+    public void setConfig(int size) {
+        this.mSize = size;
     }
 
 
@@ -201,7 +205,7 @@ public class HwLoadingView extends View {
         }
     }
 
-   
+
     private int dp2px(Context context, float dp) {
         float density = context.getResources().getDisplayMetrics().density;
         return (int) (density * dp + 0.5f);

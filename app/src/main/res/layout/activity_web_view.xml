@@ -3,7 +3,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Activity.wanAndroid.WebViewActivity">
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?actionBarSize">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/back"-->
+<!--            android:layout_width="@dimen/width_30"-->
+<!--            android:layout_height="@dimen/height_30"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="@dimen/margin_15"-->
+<!--            android:layout_marginRight="@dimen/margin_15"-->
+<!--            android:src="@mipmap/ic_launcher" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_toEndOf="@id/back"-->
+<!--            android:layout_toRightOf="@id/back"-->
+<!--            android:ellipsize="marquee"-->
+<!--            android:marqueeRepeatLimit="marquee_forever"-->
+<!--            android:maxWidth="@dimen/width_200"-->
+<!--            android:singleLine="true"-->
+<!--            android:text="asdasdasdaasdasdasdasdasdasdasdasdassda"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="@dimen/size_18" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/more"-->
+<!--            android:layout_width="@dimen/width_30"-->
+<!--            android:layout_height="@dimen/height_30"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginRight="@dimen/margin_15"-->
+<!--            android:src="@mipmap/ic_launcher" />-->
+
+
+<!--    </RelativeLayout>-->
 
     <WebView
         android:id="@+id/webView"

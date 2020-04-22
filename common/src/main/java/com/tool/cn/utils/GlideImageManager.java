@@ -18,7 +18,6 @@ import androidx.annotation.NonNull;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.Key;
-import com.bumptech.glide.load.MultiTransformation;
 import com.bumptech.glide.load.Transformation;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.engine.Resource;
@@ -27,22 +26,17 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
-import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.target.Target;
+import com.tool.cn.R;
 
 import java.io.File;
 import java.security.MessageDigest;
 
-import jp.wasabeef.glide.transformations.BlurTransformation;
-import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
-
 
 /**
- *  2016/11/15 11:46.
- *
+ * 2016/11/15 11:46.
  *
  * @version 1.0.0
  * @class GlideImageManager
@@ -70,7 +64,7 @@ import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 public class GlideImageManager {
 
 
-    public static int default_img;
+    public static int default_img = R.drawable.placeholder;
     public static int default_err_img;
     public static int default_circle_img;
     public static int default_circle_err_img;

@@ -10,6 +10,7 @@ public class ResultBean<T> {
     public T extend;
     public T items;
     public T data;
+    public T datas;
 
 
     public T results;
@@ -104,4 +105,11 @@ public class ResultBean<T> {
         this.count = count;
     }
 
+    public T getDatas() {
+        return datas;
+    }
+
+    public void setDatas(T datas) {
+        this.datas = datas;
+    }
 }

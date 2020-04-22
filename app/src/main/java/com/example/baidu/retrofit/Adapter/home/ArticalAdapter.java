@@ -22,7 +22,7 @@ import java.util.List;
  * email：
  * description：
  */
-public class ArticalAdapter extends BaseQuickAdapter<DatasBean, BaseViewHolder> implements BaseQuickAdapter.OnItemClickListener {
+public class ArticalAdapter extends BaseQuickAdapter<DatasBean, BaseViewHolder> implements BaseQuickAdapter.OnItemClickListener, BaseQuickAdapter.OnItemChildClickListener {
 
     private Context mContext;
 
@@ -30,26 +30,49 @@ public class ArticalAdapter extends BaseQuickAdapter<DatasBean, BaseViewHolder> 
         super(R.layout.item_artical_history, data);
         this.mContext = context;
         setOnItemClickListener(this);
+        setOnItemChildClickListener(this);
     }
 
+    @Override
+    public void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
+        super.onBindViewHolder(holder, position);
+
+        holder.addOnClickListener(R.id.ll_content, R.id.red_icon);
+    }
 
     @Override
     protected void convert(@NonNull BaseViewHolder baseViewHolder, DatasBean datasBean) {
         String title = replaceDquo(datasBean.getTitle());
         baseViewHolder.setText(R.id.title, title);
+        baseViewHolder.setChecked(R.id.red_icon, false);
+
     }
 
 
     @Override
     public void onItemClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
-        DatasBean datasBean = (DatasBean) baseQuickAdapter.getData().get(i);
-        Intent intent = new Intent(mContext, WebViewActivity.class);
-        intent.putExtra("url", datasBean.getLink());
-        mContext.startActivity(intent);
+
     }
 
     private String replaceDquo(String str) {
         String temp = str.replaceAll("&ldquo;", "\"");
         return temp.replaceAll("&rdquo;", "\"");
+    }
+
+    @Override
+    public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+        switch (view.getId()) {
+            case R.id.ll_content:
+                DatasBean datasBean = (DatasBean) adapter.getData().get(position);
+                Intent intent = new Intent(mContext, WebViewActivity.class);
+                intent.putExtra("url", datasBean.getLink());
+                mContext.startActivity(intent);
+                break;
+            case R.id.red_icon:
+                boolean flag = view.isSelected();
+                view.setSelected(!flag);
+                break;
+
+        }
     }
 }

@@ -5,6 +5,7 @@ import android.util.Log;
 import com.example.baidu.retrofit.Bpi;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -17,10 +18,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * 网络请求
+ * <p>
+ * Retrofit dynamically changes the address Solution:
+ * You can add a header and set the baseUrl more differently
  */
 public class RetrofitUtil {
     private volatile static RetrofitUtil sInstance;
     private Retrofit mRetrofit;
+    private int TIME_OUT = 60;
     private Bpi mTestService;
     private OkHttpClient mClient;
     private String TAG = "OKHTTP";
@@ -100,7 +105,10 @@ public class RetrofitUtil {
             }
 
 
-        }).build();
+        }).
+                connectTimeout(TIME_OUT, TimeUnit.SECONDS).
+                readTimeout(TIME_OUT, TimeUnit.SECONDS).
+                writeTimeout(TIME_OUT, TimeUnit.SECONDS).build();
 
         return mClient;
 
