@@ -1,6 +1,7 @@
 package com.example.baidu.retrofit.Activity.wanAndroid;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -74,6 +75,8 @@ public class HomePageActivity extends Rx2Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         ButterKnife.bind(this);
+
+//        startActivity(new Intent(this, LoginActivity.class));
     }
 
     @Override
