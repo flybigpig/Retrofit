@@ -38,10 +38,8 @@ public interface Bpi {
 
     String surl = "https://www.wanandroid.com/";
 
-    @POST("user/login")
-    @FormUrlEncoded
-    Observable<com.example.baidu.retrofit.Bean.home.ResultBean<UserBean>> login(@Field("username") String username, @Field("password") String password);
-
+    @GET("article/list/{page}/json")
+    Observable<ArticleBean<DataBean>> getWanArtical(@Path("page") int page);
 
     @GET("banner/json")
     Observable<ResultBean<List<BannerBean>>> getBanner();

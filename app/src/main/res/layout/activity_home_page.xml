@@ -1,51 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:openDrawer="start"
     android:orientation="vertical">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_150" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewpager_1"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/height_150" />
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/news"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:tabGravity="center"
-            app:tabIndicatorFullWidth="false"
-            app:tabMaxWidth="0dp"
-            app:tabMode="scrollable"
-            app:tabRippleColor="@android:color/transparent"
-            app:tabSelectedTextColor="@color/colorAccent"
-            app:tabTextColor="@color/black" />
+            android:background="@null"
+            android:text="@string/news" />
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="@dimen/height_20"
+
+
+
+
+
+            android:layout_gravity="center"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/projects"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/projects" />
 
     </LinearLayout>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/naviView"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@layout/activity_main_drawer"/>
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-
-</androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

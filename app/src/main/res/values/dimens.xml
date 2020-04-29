@@ -7,4 +7,5 @@
     <dimen name="size_13">13dp</dimen>
     <dimen name="width_250" />
     <dimen name="height_80">80</dimen>
+    <dimen name="px_1">1px</dimen>
 </resources>

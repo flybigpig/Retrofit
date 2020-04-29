@@ -263,5 +263,20 @@ public class BitmapUtils {
         return resizeBmp;
     }
 
+    public Bitmap getNewBitmap(Bitmap bitmap, int newWidth, int newHeight) {
+        // 获得图片的宽高.
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+        // 计算缩放比例.
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+        // 取得想要缩放的matrix参数.
+        Matrix matrix = new Matrix();
+        matrix.postScale(scaleWidth, scaleHeight);
+        // 得到新的图片.
+        Bitmap newBitmap = Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
+        return newBitmap;
+    }
+
 
 }

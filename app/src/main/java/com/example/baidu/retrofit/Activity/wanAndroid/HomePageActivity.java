@@ -1,7 +1,6 @@
 package com.example.baidu.retrofit.Activity.wanAndroid;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -106,7 +105,6 @@ public class HomePageActivity extends Rx2Activity {
                     mHandler.sendEmptyMessageDelayed(0, 10000);
                 }
                 mHandler.postDelayed(this, 4000);
-
             }
         };
         //主线程中调用：
@@ -115,6 +113,7 @@ public class HomePageActivity extends Rx2Activity {
 
     @Override
     protected void getHttp() {
+
         getBanner();
     }
 

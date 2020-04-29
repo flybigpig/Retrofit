@@ -35,10 +35,10 @@ public class ArticalFragment extends BaseFragment {
 
     @BindView(R.id.recycleView)
     RecyclerView recycleView;
-    @BindView(R.id.loading)
-    HwLoadingView loading;
     @BindView(R.id.swipeRefresh)
     SwipeRefreshLayout swipeRefresh;
+    @BindView(R.id.loading)
+    HwLoadingView loading;
     private ArticalAdapter mArticalAdapter;
 
     private static int page = 0;

@@ -12,6 +12,7 @@ package com.eyes.see.java;
  * @author Administrator
  */
 public class MyLink {
+    
     Node head = null; // 头节点
 
     /**

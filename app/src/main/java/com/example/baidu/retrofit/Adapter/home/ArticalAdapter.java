@@ -3,6 +3,7 @@ package com.example.baidu.retrofit.Adapter.home;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
+import android.widget.CheckBox;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -69,8 +70,9 @@ public class ArticalAdapter extends BaseQuickAdapter<DatasBean, BaseViewHolder> 
                 mContext.startActivity(intent);
                 break;
             case R.id.red_icon:
-                boolean flag = view.isSelected();
-                view.setSelected(!flag);
+                CheckBox checkBox = (CheckBox) view;
+                boolean flag = checkBox.isChecked();
+                checkBox.setChecked(!flag);
                 break;
 
         }
