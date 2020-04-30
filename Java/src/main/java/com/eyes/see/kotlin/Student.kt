@@ -1,4 +1,4 @@
-class Student : Person, Study {
+class Student(name :String ,age :Int) : Person(name, age), Study {
 
     override fun readBooks() {
 //        TODO("Not yet implemented")
@@ -9,21 +9,11 @@ class Student : Person, Study {
 //        TODO("Not yet implemented")
     }
 
-    init {
-        name = "Asd";
-        age = 10
-    }
-
-    constructor(name: String, age: Int) {
-        this.name=name;
-        this.age=age
-    }
-
 
 }
 
 fun main() {
-    var s = Student("aini",123)
+    var s = Student("hah",12)
     s.readBooks()
 
     var s1= Singletons()
